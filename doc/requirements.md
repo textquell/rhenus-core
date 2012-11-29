@@ -8,7 +8,7 @@ The Rhenus.Core project is the initial project of the Rhenus framework. The Rhen
 The Rhenus.Core project contains the Rhenus.Core namespace, the core component of the Rhenus project. It will build an executable that is containing a Kernel class controlling the startup and shutdown, as well as the event loop of a Rhenus node. 
 
 # Origin
-This project will be work derived from project Darkstar, a Java server framework that aimed to be a "horizontally scalable application server for low latency applications such as online games, virtual worlds and social networking applications". It has been developed by Jeff Kesselman as a personal project first and became a research project called "Sun Game Server" or "SGS" at Sun Microsystems. The project was discontinued at Sun Microsystems when Oracle bought it. For a year after that there was a community fork called ´RedDwarf´ server which haven't been contributed to since about October 2010. 
+This project will be work derived from project Darkstar, a Java server framework that aimed to be a "horizontally scalable application server for low latency applications such as online games, virtual worlds and social networking applications". It has been developed by Jeff Kesselman as a personal project first and became a research project called "Sun Game Server" or "SGS" at Sun Microsystems. The project was discontinued at Sun Microsystems when Oracle bought it. For a year after that there was a community fork called "RedDwarf" server which haven't been contributed to since about October 2010. 
 
 # License
 
