@@ -1,4 +1,4 @@
-namespace Rhenus.Kernel.API
+namespace Textquell.Core.API
 {
 
 	/// <summary>
