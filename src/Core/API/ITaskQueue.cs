@@ -1,4 +1,4 @@
-namespace Textquell.Core.API
+namespace Rhenus.Core.API
 {
 	/// <summary>
 	/// This interface defines a dependency between tasks, such that tasks are run in the order in which they are 
