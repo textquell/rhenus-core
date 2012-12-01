@@ -1,5 +1,8 @@
 namespace Rhenus.Core.API
 {
+	/// <summary>
+	/// This interface provides a handle to a recurring task in the scheduler.
+	/// </summary>
 	interface IRecurringTaskHandle
 	{
 		/// <summary>
