@@ -1,8 +1,9 @@
 namespace Rhenus.Core.API
 {
 	/// <summary>
-	/// This interface defines a dependency between tasks, such that tasks are run in the order in which they are 
-	/// submitted, and the next task isn't started until the current task has completed.
+	/// This interface defines a dependency between tasks, such that tasks are run in the order in 
+	/// which they are submitted, and the next task isn't started until the current task has 
+	/// completed.
 	/// </summary>
 	interface ITaskQueue
 	{
@@ -15,7 +16,7 @@ namespace Rhenus.Core.API
 		/// <param name='owner'>
 		/// the Identity that owns the task
 		/// </param>
-		void addTask ( IKernelRunnable task, IIdentity owner );
+		void AddTask ( IKernelRunnable task, IIdentity owner );
 	}
 }
 
