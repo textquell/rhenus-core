@@ -1,4 +1,4 @@
-namespace Rhenus.Kernel.API
+namespace Rhenus.Core.API
 {
 	/// <summary>
 	/// This is the base interface used for all tasks that can be submitted to instances of Scheduler.
