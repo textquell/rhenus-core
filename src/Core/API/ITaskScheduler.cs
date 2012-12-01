@@ -69,7 +69,7 @@ namespace Rhenus.Core.API
 		/// running on a regular period starting from that initial point. Unlike the other 
 		/// scheduleTask methods, this method will never fail to accept to the task so there is no 
 		/// need for a reservation. Note, however, that the task will not actually start executing 
-		/// until start is called on the returned RecurringTaskHandle. At each execution point the 
+		/// until <see cref="IRecurringTaskHandle.Start()"/> is called on the returned IRecurringTaskHandle. At each execution point the 
 		/// scheduler will make a best effort to run the task, but based on available resources 
 		/// scheduling the task may fail. Regardless, the scheduler will always try again at the 
 		/// next execution time.

@@ -23,7 +23,7 @@ namespace Rhenus.Core.API
 	/// Note that re-try is handled slightly differently for runTask. See the documentation on that
 	/// method for more details.
 	/// </summary>
-	/// TODO: Create a setting for the transaction timeout
+	// TODO: Create a setting for the transaction timeout
 	public interface ITransactionScheduler
 	{
 
@@ -43,7 +43,7 @@ namespace Rhenus.Core.API
 
 		/// <summary>
 		/// Reserves the ability to run the given task at a specified point in the future. The 
-		/// startTime is a <see cref="System.DateTime"/> struct.
+		/// startTime is a <see cref="System.DateTime"/> struct. 
 		/// </summary>
 		/// <returns>
 		/// An ITaskReservation for the task
@@ -58,9 +58,7 @@ namespace Rhenus.Core.API
 		/// The time at which to start the task.
 		/// </param>
 		/// <exception cref="TaskRejectedException"> if a reservation cannot be made.</exception>
-		/// TODO: DateTime is not aware of the timezone it is created in. There should be a
-		/// mechanism that is transforming Times to UTC time or casts all of the times in the 
-		/// connected nodes to the same time zone.
+		// TODO: DateTime is not aware of the timezone it is created in. There should be a mechanism that is transforming Times to UTC time or casts all of the times in the connected nodes to the same time zone.
 		ITaskReservation reserveTask (IKernelRunnable task, IIdentity owner, DateTime startTime);
 
 		/// <summary>

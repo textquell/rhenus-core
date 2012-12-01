@@ -3,7 +3,7 @@ namespace Rhenus.Core.API
 	/// <summary>
 	/// This interface provides a handle to a recurring task in the scheduler.
 	/// </summary>
-	interface IRecurringTaskHandle
+	public interface IRecurringTaskHandle
 	{
 		/// <summary>
 		/// Cancels the associated recurring task. A recurring task may be cancelled before it is 

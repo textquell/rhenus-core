@@ -5,7 +5,7 @@ namespace Rhenus.Core.API
 	/// which they are submitted, and the next task isn't started until the current task has 
 	/// completed.
 	/// </summary>
-	interface ITaskQueue
+	public interface ITaskQueue
 	{
 		/// <summary>
 		/// Adds a task to this dependency queue.

@@ -4,7 +4,7 @@ namespace Rhenus.Core.API
 	/// This is the base interface used for all tasks that can be submitted to instances of 
 	/// Scheduler.
 	/// </summary>
-	interface IKernelRunnable
+	public interface IKernelRunnable
 	{
 		/// <summary>
 		/// Returns the fully qualified type of the base task that is run by this KernelRunnable.

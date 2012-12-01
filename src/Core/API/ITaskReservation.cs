@@ -11,7 +11,7 @@ namespace Rhenus.Core.API
 	/// If this reservation includes tasks scheduled to be run at a specified time, and that time 
 	/// has already passed when use is called, then the tasks are run immediately.
 	/// </summary>
-	interface ITaskReservation
+	public interface ITaskReservation
 	{
 		/// <summary>
 		/// Cancels this reservation, releaseing the reserved space in the scheduler for the 
