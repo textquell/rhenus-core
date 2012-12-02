@@ -169,6 +169,5 @@ namespace Rhenus.Core.API
 		/// A new task queue.
 		/// </returns>
 		ITaskQueue createTaskQueue ();
-
 	}
 }
