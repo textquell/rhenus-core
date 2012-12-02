@@ -1,3 +1,5 @@
+using System;
+
 namespace Rhenus.Core.API
 {
 	/// <summary>
@@ -39,7 +41,7 @@ namespace Rhenus.Core.API
 		/// <param name='owner'>
 		/// The entity on who's behalf this task is run.
 		/// </param>
-		ITaskReservation reserveTask (KernelRunnable task, Identity owner);
+		ITaskReservation reserveTask (IKernelRunnable task, IIdentity owner);
 
 		/// <summary>
 		/// Reserves the ability to run the given task at a specified point in the future. The 

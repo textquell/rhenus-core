@@ -31,7 +31,7 @@ namespace Rhenus.Core.API
 		/// The associated description, or <c>null</c>
 		/// </returns>
 		/// <seealso cref="IAccessReporter.setObjectDescription(object, object)"/>
-		Object GetDescription ();
+		object GetDescription ();
 
 		/// <summary>
 		/// Returns the name of the source that reported this object access.

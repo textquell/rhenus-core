@@ -12,6 +12,7 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
+*.userprefs
 
 # Build results
 [Dd]ebug/
@@ -109,3 +110,6 @@ UpgradeLog*.XML
 
 # Doxygen doc output is set to the top level folder. HTML output is not versioned.
 html
+
+# no need for a solution file
+*.sln

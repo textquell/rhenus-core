@@ -16,7 +16,7 @@ namespace Rhenus.Core.API
 		/// <param name='owner'>
 		/// the Identity that owns the task
 		/// </param>
-		void AddTask ( IKernelRunnable task, IIdentity owner );
+		void AddTask (IKernelRunnable task, IIdentity owner);
 	}
 }
 
