@@ -132,7 +132,7 @@ namespace Rhenus.Core.API
 		/// for execution. In all cases, the caller will block until the task completes or fails 
 		/// permanently.
 		/// 
-		/// As with all methods of {@code TransactionScheduler}, tasks run with runTask will be run 
+		/// As with all methods of ITransactionScheduler, tasks run with runTask will be run 
 		/// transactionally. If the caller is not in an active transaction, then a transaction is 
 		/// created to run the task. If the caller is already part of an active transaction, then 
 		/// the task is run as part of that transaction, and the owner paramater is ignored.

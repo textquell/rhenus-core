@@ -112,16 +112,16 @@ namespace Rhenus.Core.API
 
 		/// <summary>
 		/// In the current transaction, associates the given object with some description that 
-		/// should have a meaningful {@code toString} method. This description will be available in
+		/// should have a meaningful toString method. This description will be available in
 		/// the profiling data, and is useful when displaying details about a given accessed 
 		/// object. The intent is that an arbitrary description can be included with an object, but 
-		/// that the description is not accessed unless a {@code ProfileListener} finds it useful 
-		/// to do so. At that point the description's {@code toString} method may be called, or the 
+		/// that the description is not accessed unless a ProfileListener finds it useful 
+		/// to do so. At that point the description's toString method may be called, or the 
 		/// object itself might be cast to some known type to extract more detail about the 
 		/// accessed object.
 		/// 
 		/// Note that this may be called before the associated object is actually accessed, and 
-		/// therefore before {@code reportObjectAccess} is called for the given {@code objId}. Use
+		/// therefore before reportObjectAccess is called for the given objId. Use
 		/// of this method is optional, and only used to provide additional detail for profiling 
 		/// and debugging.
 		/// 
@@ -148,7 +148,7 @@ namespace Rhenus.Core.API
 		/// be cast to some known type to extract more detail about the accessed object.
 		/// 
 		/// Note that this may be called before the associated object is actually accessed, and 
-		/// therefore before reportObjectAccess is called for the given {@code objId}. Use of this 
+		/// therefore before reportObjectAccess is called for the given objId. Use of this 
 		/// method is optional, and only used to provide additional detail for profiling and 
 		/// debugging.
 		/// 

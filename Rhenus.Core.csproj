@@ -62,6 +62,8 @@
     <Compile Include="src\Core\API\ITransactionScheduler.cs">
       <Link>Core\API\ITransactionScheduler.cs</Link>
     </Compile>
-    <Compile Include="Core\API\IAccessReporter.cs" />
+    <Compile Include="src\Core\API\IAccessReporter.cs">
+      <Link>Core\API\IAccessReporter.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>
