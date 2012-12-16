@@ -1,69 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{457EE573-57D4-4424-AE67-C1CA74277467}</ProjectGuid>
+    <ProjectGuid>{B1FF7C4D-ACF2-4758-9153-0264B9AEC9F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rhenus.Core</RootNamespace>
     <AssemblyName>Rhenus.Core</AssemblyName>
-    <SynchReleaseVersion>False</SynchReleaseVersion>
-    <StartupObject>Rhenus.Core.Kernel</StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>veröffentlichen\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>True</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>False</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Rhenus.Core.Kernel</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Rhenus.Auth">
+      <HintPath>..\..\rhenus-auth\bin\Debug\Rhenus.Auth.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="src\config\AssemblyInfo.cs">
-      <Link>config\AssemblyInfo.cs</Link>
+    <Compile Include="src\API\IAccessedObject.cs" />
+    <Compile Include="src\API\IAccessReporter.cs" />
+    <Compile Include="src\API\IKernelRunnable.cs" />
+    <Compile Include="src\API\IRecurringTaskHandle.cs" />
+    <Compile Include="src\API\ITaskQueue.cs" />
+    <Compile Include="src\API\ITaskReservation.cs" />
+    <Compile Include="src\API\ITaskScheduler.cs" />
+    <Compile Include="src\API\ITransactionScheduler.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="src\Core\Kernel.cs">
-      <Link>Core\Kernel.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\IAccessedObject.cs">
-      <Link>Core\API\IAccessedObject.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\IKernelRunnable.cs">
-      <Link>Core\API\IKernelRunnable.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\IRecurringTaskHandle.cs">
-      <Link>Core\API\IRecurringTaskHandle.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\ITaskQueue.cs">
-      <Link>Core\API\ITaskQueue.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\ITaskReservation.cs">
-      <Link>Core\API\ITaskReservation.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\ITaskScheduler.cs">
-      <Link>Core\API\ITaskScheduler.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\ITransactionScheduler.cs">
-      <Link>Core\API\ITransactionScheduler.cs</Link>
-    </Compile>
-    <Compile Include="src\Core\API\IAccessReporter.cs">
-      <Link>Core\API\IAccessReporter.cs</Link>
-    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="src\Kernel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
