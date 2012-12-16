@@ -53,7 +53,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Rhenus.Auth">
-      <HintPath>..\..\rhenus-auth\bin\Debug\Rhenus.Auth.dll</HintPath>
+      <HintPath>..\rhenus-auth\bin\Debug\Rhenus.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhenus.Service">
+      <HintPath>..\rhenus-service\bin\Debug\Rhenus.Service.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -76,7 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Properties\App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

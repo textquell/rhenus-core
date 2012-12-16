@@ -1,3 +1,5 @@
+using Rhenus.Service.API;
+
 namespace Rhenus.Core.API
 {
 	/// <summary>
