@@ -24,7 +24,7 @@ namespace Rhenus.Core
 
         #region HelperClasses
         readonly Settings settings = new Settings();
-        readonly ITaskScheduler taskScheduler;
+        readonly ITaskScheduler taskScheduler = new TaskScheduler();
         readonly ILog KernelLogger = LogManager.GetLogger( "Rhenus.Core.Kernel" );
         #endregion
 
@@ -46,8 +46,6 @@ namespace Rhenus.Core
 
             System.Console.WriteLine( "ThreadCount is " + ThreadCount );
 
-            // TODO: implement ITaskScheduler interface and instantiate the class here
-            //taskScheduler = new TaskScheudler();
         }
     }
 }
