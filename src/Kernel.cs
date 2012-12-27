@@ -44,6 +44,8 @@ namespace Rhenus.Core
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
             else ThreadCount = settings.ThreadCount;
 
+            System.Console.WriteLine( "ThreadCount is " + ThreadCount );
+
             // TODO: implement ITaskScheduler interface and instantiate the class here
             //taskScheduler = new TaskScheudler();
         }
