@@ -6,10 +6,15 @@ namespace Rhenus.Core
 {
     class TaskScheduler : ITaskScheduler
     {
-        #region ITaskScheduler Member
+        #region fields 
+        private readonly ILog logger = LogManager.GetLogger( "Rhenus.Core.TaskScheduler" );
+        #endregion
 
+        #region ITaskScheduler Member
         public ITaskQueue CreateTaskQueue ()
         {
+            // TODO: Get all user-visible output to be localizable
+            logger.Debug( "Creating new TaskQueue" );
             // Task Queue is a private class inside the task scheduler
             return new TaskQueue();
         }
@@ -38,7 +43,6 @@ namespace Rhenus.Core
         {
             throw new System.NotImplementedException();
         }
-
         #endregion
 
         private class TaskQueue: ITaskQueue
