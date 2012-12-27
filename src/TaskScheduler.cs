@@ -1,6 +1,9 @@
-﻿using Rhenus.Core.API;
+﻿using System.Threading;
+
+using Rhenus.Core.API;
 
 using log4net;
+
 
 namespace Rhenus.Core
 {
@@ -36,7 +39,8 @@ namespace Rhenus.Core
 
         public void ScheduleTask ( IKernelRunnable task, Auth.API.IIdentity owner )
         {
-            throw new System.NotImplementedException();
+
+            ThreadPool.QueueUserWorkItem(new WaitCallback(task.Run));
         }
 
         public void ScheduleTask ( IKernelRunnable task, Auth.API.IIdentity owner, System.DateTime startTime )
