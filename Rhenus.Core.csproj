@@ -65,7 +65,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugMessages.Designer.cs">
+    <Compile Include="Properties\DebugMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DebugMessages.resx</DependentUpon>
@@ -125,7 +125,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DebugMessages.resx">
+    <EmbeddedResource Include="Properties\DebugMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DebugMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>

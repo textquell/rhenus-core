@@ -123,4 +123,7 @@
   <data name="KernelBootErrorDescription" xml:space="preserve">
     <value>Exception was</value>
   </data>
+  <data name="KernelThreadCount" xml:space="preserve">
+    <value>ThreadCount is</value>
+  </data>
 </root>

@@ -5,7 +5,7 @@ using log4net;
 
 namespace Rhenus.Core
 {
-    class Kernel
+    sealed class Kernel
     {
         static void Main(string[] args)
         {
@@ -44,7 +44,7 @@ namespace Rhenus.Core
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
             else ThreadCount = settings.ThreadCount;
 
-            System.Console.WriteLine( "ThreadCount is " + ThreadCount );
+            System.Console.WriteLine( UserMessages.KernelThreadCount + " " + ThreadCount );
 
         }
     }

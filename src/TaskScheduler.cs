@@ -7,7 +7,7 @@ using log4net;
 
 namespace Rhenus.Core
 {
-    class TaskScheduler : ITaskScheduler
+    sealed class TaskScheduler : ITaskScheduler
     {
         #region fields 
         private readonly ILog logger = LogManager.GetLogger( "Rhenus.Core.TaskScheduler" );

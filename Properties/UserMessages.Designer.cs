@@ -77,5 +77,14 @@ namespace Rhenus.Core.Properties {
                 return ResourceManager.GetString("KernelBootErrorDescription", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ThreadCount is ähnelt.
+        /// </summary>
+        internal static string KernelThreadCount {
+            get {
+                return ResourceManager.GetString("KernelThreadCount", resourceCulture);
+            }
+        }
     }
 }
