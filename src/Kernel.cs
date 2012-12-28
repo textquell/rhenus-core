@@ -21,18 +21,18 @@ namespace Rhenus.Core
             }
         }
 
-        #region HelperClasses
+        #region Helper Classes
         readonly Settings settings = new Settings();
         readonly ITaskScheduler taskScheduler = new TaskScheduler();
         readonly ILog KernelLogger = LogManager.GetLogger( "Rhenus.Core.Kernel" );
         #endregion
 
-        #region DefaultValues
-        public int DEFAULTTHREADCOUNTPROPERTY = 4;
-        public int DEFAULTTIMEOUTPROPERTY = 15 * 60 * 1000; // = 15 minutes
+        #region Default Values
+        public const int DEFAULTTHREADCOUNTPROPERTY = 4;
+        public const int DEFAULTTIMEOUTPROPERTY = 15 * 60 * 1000; // = 15 minutes
         #endregion
 
-        #region CurrentSettings
+        #region Current Settings
         public int ThreadCount { get; set; }
         bool isShuttingDown;
         #endregion
@@ -50,6 +50,7 @@ namespace Rhenus.Core
             isShuttingDown = false;
         }
 
+        #region Shutdown Handling
         void Shutdown ()
         {
             if ( isShuttingDown ) return;
@@ -68,5 +69,6 @@ namespace Rhenus.Core
                 System.Environment.Exit( 1 );
             };
         }
+        #endregion
     }
 }
