@@ -7,7 +7,7 @@ namespace Rhenus.Core
 {
     sealed class Kernel
     {
-        static int Main(string[] args)
+        static void Main(string[] args)
         {
             try
             {
@@ -29,22 +29,44 @@ namespace Rhenus.Core
 
         #region DefaultValues
         public int DEFAULTTHREADCOUNTPROPERTY = 4;
+        public int DEFAULTTIMEOUTPROPERTY = 15 * 60 * 1000; // = 15 minutes
         #endregion
 
         #region CurrentSettings
         public int ThreadCount { get; set; }
-        bool isShuttingDown = false;
+        bool isShuttingDown;
         #endregion
 
         Kernel ()
         {
             KernelLogger.Debug( DebugMessages.Kernel_Setup );
 
-            // check if ThreadCount setting is configurated
+            // check if ThreadCount setting is configurated and set ThreadCount accordingly
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
             else ThreadCount = settings.ThreadCount;
 
             System.Console.WriteLine( UserMessages.Kernel_ThreadCount + " " + ThreadCount );
+
+            isShuttingDown = false;
+        }
+
+        void Shutdown ()
+        {
+            if ( isShuttingDown ) return;
+
+            startShutDownTimeOut( DEFAULTTIMEOUTPROPERTY );
+            isShuttingDown = true;
+        }
+
+        void startShutDownTimeOut ( int timeout )
+        {
+            System.Timers.Timer timer = new System.Timers.Timer( timeout );
+            timer.Start();
+            timer.Elapsed += delegate( object sender, System.Timers.ElapsedEventArgs e )
+            {
+                // forcefully terminate the application
+                System.Environment.Exit( 1 );
+            };
         }
     }
 }
