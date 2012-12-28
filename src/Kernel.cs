@@ -17,8 +17,8 @@ namespace Rhenus.Core
             catch ( System.Exception exception )
             {
                 // TODO: Make any user-visible messages localizable
-                System.Console.WriteLine( "Exception on booting the Kernel" );
-                System.Console.WriteLine( "Exception was " + exception.Message);
+                System.Console.WriteLine( UserMessages.KernelBootError );
+                System.Console.WriteLine( UserMessages.KernelBootErrorDescription + exception.Message);
             }
         }
 
@@ -38,7 +38,7 @@ namespace Rhenus.Core
 
         void SetUp ()
         {
-            KernelLogger.Debug( "Setting up the kernel..." );
+            KernelLogger.Debug( DebugMessages.KernelSetup );
 
             // check if ThreadCount setting is configurated
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
