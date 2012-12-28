@@ -39,7 +39,6 @@ namespace Rhenus.Core
 
         public void ScheduleTask ( IKernelRunnable task, Auth.API.IIdentity owner )
         {
-
             ThreadPool.QueueUserWorkItem(new WaitCallback(task.Run));
         }
 

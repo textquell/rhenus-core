@@ -21,12 +21,16 @@ namespace Rhenus.Core.API
 		
 		/// <summary>
 		/// Runs this KernelRunnable. 
+        /// </summary>
+        /// <remarks>
 		/// If this is run by a Scheduler that support re-try logic, and if an Exception is thrown 
 		/// that implements ExceptionRetryStatus then the Scheduler will consult the shouldRetry 
 		/// method of the Exception to see if this task should be re-run.
-		/// </summary>
+        /// </remarks>
+        /// <param name="state">An object used for handing information to the thread executing the 
+        /// task</param>
 		/// <exception cref="System.Exception">if any errors occur</exception>
-        void Run ();
+        void Run (object state);
 	}
 }
 
