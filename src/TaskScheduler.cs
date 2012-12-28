@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 
 using Rhenus.Core.API;
+using Rhenus.Core.Properties;
 
 using log4net;
 
@@ -16,8 +17,7 @@ namespace Rhenus.Core
         #region ITaskScheduler Member
         public ITaskQueue CreateTaskQueue ()
         {
-            // TODO: Get all user-visible output to be localizable
-            logger.Debug( "Creating new TaskQueue" );
+            logger.Debug( DebugMessages.TaskScheduler_CreateNewTaskQueue );
             // Task Queue is a private class inside the task scheduler
             return new TaskQueue();
         }

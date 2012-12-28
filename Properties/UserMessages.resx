@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="KernelBootError" xml:space="preserve">
+  <data name="Kernel_BootError" xml:space="preserve">
     <value>Exception on booting the Kernel</value>
   </data>
-  <data name="KernelBootErrorDescription" xml:space="preserve">
+  <data name="Kernel_BootError_Description" xml:space="preserve">
     <value>Exception was</value>
   </data>
-  <data name="KernelThreadCount" xml:space="preserve">
+  <data name="Kernel_ThreadCount" xml:space="preserve">
     <value>ThreadCount is</value>
   </data>
 </root>

@@ -63,9 +63,18 @@ namespace Rhenus.Core.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Setting up the Kernel ähnelt.
         /// </summary>
-        internal static string KernelSetup {
+        internal static string Kernel_Setup {
             get {
-                return ResourceManager.GetString("KernelSetup", resourceCulture);
+                return ResourceManager.GetString("Kernel_Setup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Creating new task queue ähnelt.
+        /// </summary>
+        internal static string TaskScheduler_CreateNewTaskQueue {
+            get {
+                return ResourceManager.GetString("TaskScheduler_CreateNewTaskQueue", resourceCulture);
             }
         }
     }

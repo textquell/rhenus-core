@@ -63,27 +63,27 @@ namespace Rhenus.Core.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Exception on booting the Kernel ähnelt.
         /// </summary>
-        internal static string KernelBootError {
+        internal static string Kernel_BootError {
             get {
-                return ResourceManager.GetString("KernelBootError", resourceCulture);
+                return ResourceManager.GetString("Kernel_BootError", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Exception was ähnelt.
         /// </summary>
-        internal static string KernelBootErrorDescription {
+        internal static string Kernel_BootError_Description {
             get {
-                return ResourceManager.GetString("KernelBootErrorDescription", resourceCulture);
+                return ResourceManager.GetString("Kernel_BootError_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die ThreadCount is ähnelt.
         /// </summary>
-        internal static string KernelThreadCount {
+        internal static string Kernel_ThreadCount {
             get {
-                return ResourceManager.GetString("KernelThreadCount", resourceCulture);
+                return ResourceManager.GetString("Kernel_ThreadCount", resourceCulture);
             }
         }
     }

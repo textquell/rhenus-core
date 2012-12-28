@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="KernelSetup" xml:space="preserve">
+  <data name="Kernel_Setup" xml:space="preserve">
     <value>Setting up the Kernel</value>
+  </data>
+  <data name="TaskScheduler_CreateNewTaskQueue" xml:space="preserve">
+    <value>Creating new task queue</value>
   </data>
 </root>
