@@ -38,7 +38,7 @@ namespace Rhenus.Core
 
         void SetUp ()
         {
-            // TODO: Set up logging for this class before anything happens. Use and configure log4net to do so.
+            KernelLogger.Debug( "Setting up the kernel..." );
 
             // check if ThreadCount setting is configurated
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
