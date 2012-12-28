@@ -7,18 +7,17 @@ namespace Rhenus.Core
 {
     sealed class Kernel
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             try
             {
                 Kernel kernel = new Kernel();
-                kernel.SetUp();
             }
             catch ( System.Exception exception )
             {
                 // TODO: Make any user-visible messages localizable
-                System.Console.WriteLine( UserMessages.KernelBootError );
-                System.Console.WriteLine( UserMessages.KernelBootErrorDescription + exception.Message);
+                System.Console.WriteLine( UserMessages.Kernel_BootError );
+                System.Console.WriteLine( UserMessages.Kernel_BootError_Description + " " + exception.Message);
             }
         }
 
@@ -29,23 +28,23 @@ namespace Rhenus.Core
         #endregion
 
         #region DefaultValues
-        public readonly int DEFAULTTHREADCOUNTPROPERTY = 4;
+        public int DEFAULTTHREADCOUNTPROPERTY = 4;
         #endregion
 
         #region CurrentSettings
-        int ThreadCount { get; set; }
+        public int ThreadCount { get; set; }
+        bool isShuttingDown = false;
         #endregion
 
-        void SetUp ()
+        Kernel ()
         {
-            KernelLogger.Debug( DebugMessages.KernelSetup );
+            KernelLogger.Debug( DebugMessages.Kernel_Setup );
 
             // check if ThreadCount setting is configurated
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
             else ThreadCount = settings.ThreadCount;
 
-            System.Console.WriteLine( UserMessages.KernelThreadCount + " " + ThreadCount );
-
+            System.Console.WriteLine( UserMessages.Kernel_ThreadCount + " " + ThreadCount );
         }
     }
 }
