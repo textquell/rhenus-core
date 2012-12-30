@@ -65,6 +65,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\InfoMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InfoMessages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\DebugMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,6 +130,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\InfoMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InfoMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\DebugMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DebugMessages.Designer.cs</LastGenOutput>

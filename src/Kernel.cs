@@ -5,20 +5,11 @@ using log4net;
 
 namespace Rhenus.Core
 {
-    sealed class Kernel
+    sealed class Kernel: System.IDisposable
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Kernel kernel = new Kernel();
-            }
-            catch ( System.Exception exception )
-            {
-                // TODO: Make any user-visible messages localizable
-                System.Console.WriteLine( UserMessages.Kernel_BootError );
-                System.Console.WriteLine( UserMessages.Kernel_BootError_Description + " " + exception.Message);
-            }
+            using ( Kernel kernel = new Kernel() );
         }
 
         #region Helper Classes
@@ -39,7 +30,7 @@ namespace Rhenus.Core
 
         Kernel ()
         {
-            KernelLogger.Debug( DebugMessages.Kernel_Setup );
+            KernelLogger.Info( InfoMessages.Kernel_Initializing );
 
             // check if ThreadCount setting is configurated and set ThreadCount accordingly
             if (settings.ThreadCount.Equals(null)) ThreadCount = DEFAULTTHREADCOUNTPROPERTY;
@@ -55,6 +46,8 @@ namespace Rhenus.Core
         {
             if ( isShuttingDown ) return;
 
+            KernelLogger.Info(InfoMessages.Kernel_ShutDownCalled);
+
             startShutDownTimeOut( DEFAULTTIMEOUTPROPERTY );
             isShuttingDown = true;
         }
@@ -69,6 +62,17 @@ namespace Rhenus.Core
                 System.Environment.Exit( 1 );
             };
         }
+        #endregion
+
+        #region IDisposable Member
+
+        public void Dispose ()
+        {
+            // TODO: Create a mechanism here that is shutting down the server in an orderly way. At least it should be logged that the GC attempts to finalize the kernel
+            KernelLogger.Info(InfoMessages.Kernel_GettingDisposed);
+            Shutdown();
+        }
+
         #endregion
     }
 }
