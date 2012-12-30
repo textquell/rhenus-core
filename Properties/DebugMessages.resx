@@ -120,6 +120,9 @@
   <data name="Kernel_Setup" xml:space="preserve">
     <value>Setting up the Kernel</value>
   </data>
+  <data name="TaskScheduler_Constructor_Created" xml:space="preserve">
+    <value>New TaskScheduler created</value>
+  </data>
   <data name="TaskScheduler_CreateNewTaskQueue" xml:space="preserve">
     <value>Creating new task queue</value>
   </data>

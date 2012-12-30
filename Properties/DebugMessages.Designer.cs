@@ -70,6 +70,15 @@ namespace Rhenus.Core.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die New TaskScheduler created ähnelt.
+        /// </summary>
+        internal static string TaskScheduler_Constructor_Created {
+            get {
+                return ResourceManager.GetString("TaskScheduler_Constructor_Created", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Creating new task queue ähnelt.
         /// </summary>
         internal static string TaskScheduler_CreateNewTaskQueue {

@@ -14,6 +14,12 @@ namespace Rhenus.Core
         private readonly ILog logger = LogManager.GetLogger( "Rhenus.Core.TaskScheduler" );
         #endregion
 
+        public TaskScheduler ()
+        {
+            // TODO: Hand over a handle to a profiler so the task scheduler can tell it how fast and effective it is working
+            logger.Debug( DebugMessages.TaskScheduler_Constructor_Created);
+        }
+
         #region ITaskScheduler Member
         public ITaskQueue CreateTaskQueue ()
         {
