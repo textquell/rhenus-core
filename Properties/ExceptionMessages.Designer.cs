@@ -22,14 +22,14 @@ namespace Rhenus.Core.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DebugMessages {
+    internal class ExceptionMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DebugMessages() {
+        internal ExceptionMessages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Rhenus.Core.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rhenus.Core.Properties.DebugMessages", typeof(DebugMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rhenus.Core.Properties.ExceptionMessages", typeof(ExceptionMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,20 @@ namespace Rhenus.Core.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Setting up the Kernel ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Owner cannot be null ähnelt.
         /// </summary>
-        internal static string Kernel_Setup {
+        internal static string TaskScheduler_TaskDetail_OwnerNullException {
             get {
-                return ResourceManager.GetString("Kernel_Setup", resourceCulture);
+                return ResourceManager.GetString("TaskScheduler_TaskDetail_OwnerNullException", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die New TaskScheduler created ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Task cannot be null ähnelt.
         /// </summary>
-        internal static string TaskScheduler_Constructor_Created {
+        internal static string TaskScheduler_TaskDetail_TaskNullException {
             get {
-                return ResourceManager.GetString("TaskScheduler_Constructor_Created", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Creating new task queue ähnelt.
-        /// </summary>
-        internal static string TaskScheduler_CreateNewTaskQueue {
-            get {
-                return ResourceManager.GetString("TaskScheduler_CreateNewTaskQueue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die New TaskDetail object created ähnelt.
-        /// </summary>
-        internal static string TaskScheduler_TaskDetail_Constructor {
-            get {
-                return ResourceManager.GetString("TaskScheduler_TaskDetail_Constructor", resourceCulture);
+                return ResourceManager.GetString("TaskScheduler_TaskDetail_TaskNullException", resourceCulture);
             }
         }
     }

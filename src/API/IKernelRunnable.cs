@@ -27,10 +27,8 @@ namespace Rhenus.Core.API
 		/// that implements ExceptionRetryStatus then the Scheduler will consult the shouldRetry 
 		/// method of the Exception to see if this task should be re-run.
         /// </remarks>
-        /// <param name="state">An object used for handing information to the thread executing the 
-        /// task</param>
 		/// <exception cref="System.Exception">if any errors occur</exception>
-        void Run (object state);
+        void Run ();
 	}
 }
 

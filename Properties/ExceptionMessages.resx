@@ -117,16 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Kernel_Setup" xml:space="preserve">
-    <value>Setting up the Kernel</value>
+  <data name="TaskScheduler_TaskDetail_OwnerNullException" xml:space="preserve">
+    <value>Owner cannot be null</value>
   </data>
-  <data name="TaskScheduler_Constructor_Created" xml:space="preserve">
-    <value>New TaskScheduler created</value>
-  </data>
-  <data name="TaskScheduler_CreateNewTaskQueue" xml:space="preserve">
-    <value>Creating new task queue</value>
-  </data>
-  <data name="TaskScheduler_TaskDetail_Constructor" xml:space="preserve">
-    <value>New TaskDetail object created</value>
+  <data name="TaskScheduler_TaskDetail_TaskNullException" xml:space="preserve">
+    <value>Task cannot be null</value>
   </data>
 </root>
