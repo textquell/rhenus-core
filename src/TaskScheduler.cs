@@ -57,6 +57,7 @@ namespace Rhenus.Core
         }
         #endregion
 
+        #region Nested Classes
         private class TaskQueue: ITaskQueue
         {
             // TODO: Take a System.Collection that is a Queue and make it accept ITask instances. 
@@ -120,5 +121,12 @@ namespace Rhenus.Core
 
             public bool isRecurring () { return period != 0; }
         }
+
+
+        private class TaskRunner
+        {
+            // TODO: Implement this class with getting a task detail handed over and exectuing the run method in the task. 
+        }
+        #endregion
     }
 }
